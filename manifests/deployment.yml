@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: voltapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: voltapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: voltapipelinesjavascriptdocker 
+          image: raymycontainerregistry.azurecr.io/voltapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
